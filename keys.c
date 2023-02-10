@@ -6,7 +6,7 @@
 /*   By: irmoreno <irmoreno@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 12:23:01 by irmoreno          #+#    #+#             */
-/*   Updated: 2023/02/10 12:23:02 by irmoreno         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:38:10 by irmoreno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,31 +51,19 @@ int	ft_keys(int keycode, void *program)
 	t_program	*mlx;
 
 	mlx = program;
-	if (keycode == 65307 || keycode == 53)
+	if (keycode == 53)
 		ft_close_win(mlx);
 	if (mlx->won != 1 && mlx->dead != 1)
 	{
-		//ft_putstr_fd("%d", keycode);
-		/*if (keycode == 13 || keycode == 0 || keycode == 1 || keycode == 2)
+		if (keycode == 13 || keycode == 0 || keycode == 1 || keycode == 2)
 		{
 			if (keycode == 13)
-				ft_move_up(program);
-			else if (keycode == 0)
-				ft_move_left(program);
-			else if (keycode == 1)
-				ft_move_down(program);
-			else if (keycode == 2)
-				ft_move_right(program);
-		}*/
-		if (keycode == 119 || keycode == 97 || keycode == 115 || keycode == 100)
-		{
-			if (keycode == 119) //w
 				ft_move_player((-1), 0, program);
-			else if (keycode == 97) //a
+			else if (keycode == 0)
 				ft_move_player(0, (-1), program);
-			else if (keycode == 115) //s
+			else if (keycode == 1)
 				ft_move_player(1, 0, program);
-			else if (keycode == 100) //d
+			else if (keycode == 2)
 				ft_move_player(0, 1, program);
 		}
 	}
